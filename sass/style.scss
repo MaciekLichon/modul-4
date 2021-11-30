@@ -121,6 +121,21 @@ section {
       font-family: $font-subtitle;
       margin: 0;
     }
+    a {
+      position: relative;
+    }
+    a::after {
+      position: absolute;
+      content: "";
+      width: 150px;
+      height: 60px;
+      background: $color-two;
+      border-radius: 5px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
   }
 
 }
@@ -205,6 +220,8 @@ section {
   }
   .portfolio-subtitle {
     margin: 0;
+    font-style: italic;
+    color: $color-three;
   }
   .element-title {
     margin: 0;
