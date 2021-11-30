@@ -3,6 +3,8 @@
 
 $color-one: white;
 $color-two: gold;
+$color-three: grey;
+$color-four: #f7f7f7;
 
 $font-titles: 'Bebas Neue', cursive;
 $font-hand: 'Yellowtail', cursive;
@@ -10,6 +12,7 @@ $font-subtitle: 'Merriweather', serif;
 
 
 /* Global */
+
 
 body {
   margin: 0;
@@ -21,7 +24,44 @@ a {
   font-family: $font-titles;
 }
 
+section {
+  padding: 90px 0;
+
+  .section-header {
+    margin: 0 0 40px 0;
+  }
+
+  .section-title {
+    font-family: $font-titles;
+    font-size: 47px;
+    margin: 0;
+  }
+
+  .section-subtitle {
+    font-family: $font-subtitle;
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    color: $color-three;
+  }
+
+  .custom-item-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .element-title {
+    font-family: $font-titles;
+    font-size: 27px;
+    margin: 5px;
+  }
+}
+
+
 /* Splash */
+
 
 .splash {
   height: 100vh;
@@ -40,7 +80,7 @@ a {
   }
 
   .navigation {
-    .nav-row {
+    .custom-nav-row {
       justify-content: space-between;
     }
     .box {
@@ -60,6 +100,7 @@ a {
       color: $color-two;
       font-family: $font-hand;
       font-style: italic;
+      font-size: 30px;
     }
   }
 
@@ -82,4 +123,90 @@ a {
     }
   }
 
+}
+
+
+/* Services */
+
+
+.service-content {
+  margin-top: 10px;
+  padding: 0;
+  max-width: none;
+}
+
+.service-description {
+  font-family: $font-subtitle;
+  font-size: 14px;
+  color: $color-three;
+}
+
+.service-icon {
+  height: 70px;
+  font-size: 35px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-two;
+}
+
+.service-icon::after {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 70px;
+  border: 5px solid $color-two;
+  border-radius: 50%;
+}
+
+
+/* Porfolio */
+
+
+.portfolio {
+  background-color: $color-four;
+
+  .custom-portfolio-row {
+    margin: 0;
+    height: 400px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .custom-portfolio-row:last-of-type {
+    margin-bottom: 0;
+  }
+  .portfolio-item {
+    background: $color-one;
+    flex: 30%;
+    max-width: 30%;
+  }
+  .custom-card-row {
+    flex-direction: column;
+    height: 400px;
+    margin: 0;
+  }
+  .portfolio-image {
+    flex: 0 0 75%;
+    max-height: 75%;
+  }
+  .portfolio-content {
+    flex: 0 0 25%;
+    max-height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .portfolio-subtitle {
+    margin: 0;
+  }
+  .element-title {
+    margin: 0;
+  }
 }
