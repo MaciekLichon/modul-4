@@ -5,6 +5,7 @@ $color-one: white;
 $color-two: gold;
 $color-three: grey;
 $color-four: #f7f7f7;
+$color-five: black;
 
 $font-titles: 'Bebas Neue', cursive;
 $font-hand: 'Yellowtail', cursive;
@@ -225,5 +226,51 @@ section {
   }
   .element-title {
     margin: 0;
+  }
+}
+
+
+/* Footer */
+
+
+footer {
+  text-align: left;
+  padding: 30px 0;
+
+  p {
+    font-family: $font-titles;
+  }
+  a {
+    color: $color-one;
+    font-size: 25px;
+    height: 25px;
+    position: relative;
+  }
+  .custom-footer-row {
+    align-items: center;
+  }
+  .footer-icon-section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-icon {
+    position: relative;
+    margin: 0 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-icon::after {
+    position: absolute;
+    content: "";
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: $color-five;
+    z-index: -1;
   }
 }
